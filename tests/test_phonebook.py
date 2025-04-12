@@ -36,8 +36,18 @@ def test_addContactPositiveTest(login):#login -- fixture1
 
     contactpage.checkAdding('Dasha')
 
-def test_deleteContactPositiveTest(addContact):#login -- fixture1
+def test_deleteContactPositiveTest(addContact):
     homepage = homePage(addContact)
+    contactpage=contactPage(addContact)
+    time.sleep(3)
+
+    contactpage.checkAddedContact()
+    time.sleep(3)
+    contactpage.clickRemoveBtn()
+
+
+
+
 
 
 

@@ -60,3 +60,13 @@ class contactPage:
         )
 
 
+    def checkAddedContact(self):
+        clickOnContact = self.driver.find_element(By.CSS_SELECTOR, '.contact-item_card__2SOIM')
+        clickOnContact.click()
+
+
+    def clickRemoveBtn(self):
+        removeBtn = self.driver.find_element(By.XPATH, '//button[.="Remove"]')
+        removeBtn.click()
+
+

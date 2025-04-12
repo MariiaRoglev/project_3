@@ -64,6 +64,11 @@ def addContact(driver,login):
     descriptionField.click()
     descriptionField.send_keys('QA')
 
+    clickSaveBtn = driver.find_element(By.CSS_SELECTOR, '.add_form__2rsm2 button')
+    clickSaveBtn.click()
+
+    return login
+
 
 
 
