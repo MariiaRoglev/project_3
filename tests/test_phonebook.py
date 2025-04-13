@@ -1,17 +1,14 @@
 import os
 import time
-
-
 import pytest
 from pip._internal.resolution.resolvelib.factory import C
 from selenium.webdriver.common.by import By
-
 from pages.contactPage import contactPage
 from pages.homePage import homePage
 from pages.loginForm import loginForm
 import pyautogui
-
 from tests.conftest import capture_screenshot
+import logging
 
 
 def test_LoginPositiveTests(driver):#driver--fixture 1
@@ -62,18 +59,6 @@ def test_deleteContactPositiveTest(addContact):
 
 
 
-
-
-
-
-
-        #driver.quit()
-
-#def capture_screenshot(test_name):
-   # screenshot_path = os.path.join(os.getcwd(), f"{test_name}_failed.png")
-   # screenshot = pyautogui.screenshot()
-   # screenshot.save(screenshot_path)
-   # print(f"Screenshot saved at: {screenshot_path}")
 
 
 

@@ -1,6 +1,5 @@
 import os
 import time
-
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -8,6 +7,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 import pyautogui
+import logging
 
 @pytest.fixture()
 def driver():
@@ -71,7 +71,7 @@ def addContact(driver,login):
 
     return login
 
-#-----------------------#FOR SCREENSHOT!!!!!!!!!-----------------------------------------
+#-----------------------#FOR SCREENSHOT AND LOGS!!!!!!!!!-----------------------------------------
 def capture_screenshot(test_name):
     try:
         folder_path = "C:/Users/winte/PycharmProjects/PythonProject3/tests/screenshot"
@@ -79,23 +79,49 @@ def capture_screenshot(test_name):
         screenshot = pyautogui.screenshot()
         screenshot.save(screenshot_path)
         print(f"Screenshot saved at: {screenshot_path}")
+        return screenshot_path
     except Exception as e:
         print(f"Error capturing screenshot: {e}")
+        return None
 
-@pytest.hookimpl(tryfirst=True, hookwrapper=True)#2 FOR SCREENSHOT!!!!!!!!!
+def pytest_configure(config):
+    logging.basicConfig(
+        filename="test_results.log",
+        level=logging.INFO,
+        format="%(asctime)s - %(message)s",
+    )
+    logging.info("Starting Test Session")
+
+
+@pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item, call):
     outcome = yield
     report = outcome.get_result()
 
-    # Check if the test failed
-    if report.when == "call" and report.failed:
+    # Log the test result
+    if report.when == "call":  # Only handle the test call stage
         test_name = item.name
-        print(f"Test failed: {test_name}")
-        capture_screenshot(test_name)
-    # -------------------------------------------------------------------------------------
+
+        if report.passed:
+            logging.info(f"PASSED: {test_name}")
+        elif report.failed:
+            # Capture a screenshot if the test failed
+            screenshot_path = capture_screenshot(test_name)
+
+            # Log the failure and screenshot path
+            if screenshot_path:
+                logging.error(f"FAILED: {test_name} (Screenshot: {screenshot_path})")
+            else:
+                logging.error(f"FAILED: {test_name} (Screenshot capture failed)")
+        else:
+            logging.warning(f"SKIPPED: {test_name}")
 
 
 
 
-    #driver.quit()
+
+
+
+
+
 

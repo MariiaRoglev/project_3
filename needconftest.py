@@ -21,7 +21,6 @@ def driver():
 
 
 
-
     #driver.get('https://telranedu.web.app/home')
 
     # all that connects to Valid Login
