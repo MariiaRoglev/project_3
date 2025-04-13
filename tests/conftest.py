@@ -72,11 +72,15 @@ def addContact(driver,login):
     return login
 
 #-----------------------#FOR SCREENSHOT!!!!!!!!!-----------------------------------------
-def capture_screenshot(test_name):#1 FOR SCREENSHOT!!!!!!!!!
-        screenshot_path = os.path.join(os.getcwd(), f"{test_name}_failed.png")
+def capture_screenshot(test_name):
+    try:
+        folder_path = "C:/Users/winte/PycharmProjects/PythonProject3/tests/screenshot"
+        screenshot_path = os.path.join(folder_path, f"{test_name}_failed.png")
         screenshot = pyautogui.screenshot()
         screenshot.save(screenshot_path)
         print(f"Screenshot saved at: {screenshot_path}")
+    except Exception as e:
+        print(f"Error capturing screenshot: {e}")
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)#2 FOR SCREENSHOT!!!!!!!!!
 def pytest_runtest_makereport(item, call):
@@ -85,7 +89,7 @@ def pytest_runtest_makereport(item, call):
 
     # Check if the test failed
     if report.when == "call" and report.failed:
-        test_name = item.name  # Get the name of the failed test
+        test_name = item.name
         print(f"Test failed: {test_name}")
         capture_screenshot(test_name)
     # -------------------------------------------------------------------------------------
