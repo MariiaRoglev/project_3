@@ -1,0 +1,81 @@
+2025-04-13 17:26:49,274 - root - INFO - Running Tests
+2025-04-13 17:26:50,592 - WDM - INFO - ====== WebDriver manager ======
+2025-04-13 17:26:52,112 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:26:52,693 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:26:53,264 - WDM - INFO - Driver [C:\Users\winte\.wdm\drivers\chromedriver\win64\135.0.7049.84\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-13 17:26:59,248 - root - INFO - PASSED: test_LoginPositiveTests
+2025-04-13 17:27:01,522 - WDM - INFO - ====== WebDriver manager ======
+2025-04-13 17:27:02,951 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:27:03,498 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:27:04,047 - WDM - INFO - Driver [C:\Users\winte\.wdm\drivers\chromedriver\win64\135.0.7049.84\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-13 17:27:10,646 - root - ERROR - FAILED: test_LoginNegativeTestsWithEmptyEmail
+2025-04-13 17:27:13,164 - WDM - INFO - ====== WebDriver manager ======
+2025-04-13 17:27:15,387 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:27:15,927 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:27:16,482 - WDM - INFO - Driver [C:\Users\winte\.wdm\drivers\chromedriver\win64\135.0.7049.84\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-13 17:27:29,802 - root - INFO - PASSED: test_addContactPositiveTest
+2025-04-13 17:27:32,122 - WDM - INFO - ====== WebDriver manager ======
+2025-04-13 17:27:33,487 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:27:34,051 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:27:34,607 - WDM - INFO - Driver [C:\Users\winte\.wdm\drivers\chromedriver\win64\135.0.7049.84\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-13 17:27:44,946 - root - INFO - PASSED: test_deleteContactPositiveTest
+2025-04-13 17:31:49,553 - root - INFO - Running Tests
+2025-04-13 17:31:51,715 - WDM - INFO - ====== WebDriver manager ======
+2025-04-13 17:31:53,296 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:31:53,933 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:31:54,509 - WDM - INFO - Driver [C:\Users\winte\.wdm\drivers\chromedriver\win64\135.0.7049.84\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-13 17:32:08,536 - root - INFO - PASSED: test_addContactPositiveTest
+2025-04-13 17:37:09,241 - root - INFO - Running Tests
+2025-04-13 17:37:10,601 - WDM - INFO - ====== WebDriver manager ======
+2025-04-13 17:37:12,204 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:37:12,790 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:37:13,364 - WDM - INFO - Driver [C:\Users\winte\.wdm\drivers\chromedriver\win64\135.0.7049.84\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-13 17:37:20,806 - root - INFO - PASSED: test_LoginPositiveTests
+2025-04-13 17:37:23,130 - WDM - INFO - ====== WebDriver manager ======
+2025-04-13 17:37:24,609 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:37:25,211 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:37:25,760 - WDM - INFO - Driver [C:\Users\winte\.wdm\drivers\chromedriver\win64\135.0.7049.84\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-13 17:37:31,900 - root - ERROR - FAILED: test_LoginNegativeTestsWithEmptyEmail
+2025-04-13 17:37:34,154 - WDM - INFO - ====== WebDriver manager ======
+2025-04-13 17:37:35,374 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:37:35,935 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:37:36,477 - WDM - INFO - Driver [C:\Users\winte\.wdm\drivers\chromedriver\win64\135.0.7049.84\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-13 17:37:49,044 - root - INFO - PASSED: test_addContactPositiveTest
+2025-04-13 17:37:51,399 - WDM - INFO - ====== WebDriver manager ======
+2025-04-13 17:37:52,814 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:37:53,354 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:37:53,900 - WDM - INFO - Driver [C:\Users\winte\.wdm\drivers\chromedriver\win64\135.0.7049.84\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-13 17:38:04,587 - root - INFO - PASSED: test_deleteContactPositiveTest
+2025-04-13 17:38:57,979 - root - INFO - Running Tests
+2025-04-13 17:38:59,295 - WDM - INFO - ====== WebDriver manager ======
+2025-04-13 17:39:00,609 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:39:01,178 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:39:01,729 - WDM - INFO - Driver [C:\Users\winte\.wdm\drivers\chromedriver\win64\135.0.7049.84\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-13 17:39:07,561 - root - ERROR - FAILED: test_LoginNegativeTestsWithEmptyEmail
+2025-04-13 17:40:28,007 - root - INFO - Running Tests
+2025-04-13 17:40:29,154 - WDM - INFO - ====== WebDriver manager ======
+2025-04-13 17:40:30,402 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:40:30,979 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:40:31,553 - WDM - INFO - Driver [C:\Users\winte\.wdm\drivers\chromedriver\win64\135.0.7049.84\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-13 17:40:37,447 - root - ERROR - FAILED: test_LoginNegativeTestsWithEmptyEmail
+2025-04-13 17:48:59,694 - Starting Test Session
+2025-04-13 17:49:00,996 - ====== WebDriver manager ======
+2025-04-13 17:49:02,244 - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:49:02,809 - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:49:03,368 - Driver [C:\Users\winte\.wdm\drivers\chromedriver\win64\135.0.7049.84\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-13 17:49:09,600 - PASSED: test_LoginPositiveTests
+2025-04-13 17:49:11,961 - ====== WebDriver manager ======
+2025-04-13 17:49:13,998 - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:49:14,538 - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:49:15,096 - Driver [C:\Users\winte\.wdm\drivers\chromedriver\win64\135.0.7049.84\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-13 17:49:21,423 - FAILED: test_LoginNegativeTestsWithEmptyEmail (Screenshot: C:/Users/winte/PycharmProjects/PythonProject3/tests/screenshot\test_LoginNegativeTestsWithEmptyEmail_failed.png)
+2025-04-13 17:49:23,669 - ====== WebDriver manager ======
+2025-04-13 17:49:24,933 - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:49:25,496 - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:49:26,048 - Driver [C:\Users\winte\.wdm\drivers\chromedriver\win64\135.0.7049.84\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-13 17:49:38,432 - PASSED: test_addContactPositiveTest
+2025-04-13 17:49:40,675 - ====== WebDriver manager ======
+2025-04-13 17:49:41,980 - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:49:42,531 - Get LATEST chromedriver version for google-chrome
+2025-04-13 17:49:43,086 - Driver [C:\Users\winte\.wdm\drivers\chromedriver\win64\135.0.7049.84\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-13 17:49:53,370 - PASSED: test_deleteContactPositiveTest
