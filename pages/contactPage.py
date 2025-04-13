@@ -38,35 +38,41 @@ class contactPage:
         clickSaveBtn = self.driver.find_element(By.CSS_SELECTOR, '.add_form__2rsm2 button')
         clickSaveBtn.click()
 
-
-    def checkAdding(self, contact):
-        card = self.driver.find_element(By.CSS_SELECTOR, '.contact-item_card__2SOIM')
-        name_element = card.find_element(By.TAG_NAME, 'h2')
-
-        actual_name = name_element.text.strip()
-
-        assert actual_name == contact
+    def checkThatNewContactWasAdded(self, contact):
+        newUserNAme = self.driver.find_element(By.CSS_SELECTOR, '[class="contact-page_leftdiv__yhyke"] div:last-child>h2')
+        assert newUserNAme.text == contact
+        print(newUserNAme.text+'='+contact)
 
 
-
-    def scroll_to_contact(self, name):
-        scrollable = self.driver.find_element(By.CSS_SELECTOR, ".contact-list-container")  # замените на реальный класс
-        target = self.driver.find_element(By.XPATH, f"//h2[contains(text(), '{name}')]")
-
-        self.driver.execute_script(
-            "arguments[0].scrollTop = arguments[1].offsetTop;",
-            scrollable,
-            target
-        )
-
-
-    def checkAddedContact(self):
-        clickOnContact = self.driver.find_element(By.CSS_SELECTOR, '.contact-item_card__2SOIM')
+    def clickOnAddedContact(self):
+        clickOnContact = self.driver.find_element(By.CSS_SELECTOR, '[class="contact-page_leftdiv__yhyke"] div:last-child>h2')
         clickOnContact.click()
-
 
     def clickRemoveBtn(self):
         removeBtn = self.driver.find_element(By.XPATH, '//button[.="Remove"]')
         removeBtn.click()
+
+    def countContactsBefore(self):
+        contacts_before = self.driver.find_elements(By.CSS_SELECTOR, 'div[class="contact-item_card__2SOIM"]')
+        qty_before = len(contacts_before)
+        print(f"Contacts before deletion: {qty_before}")
+        return qty_before
+
+    def countContactsAfter(self):
+        contacts_after = self.driver.find_elements(By.CSS_SELECTOR, 'div[class="contact-item_card__2SOIM"]')
+        qty_after = len(contacts_after)
+        print(f"Contacts after deletion: {qty_after}")
+        return qty_after
+
+    def isContactWasDeleted(self, qty_before):
+        qty_after = self.countContactsAfter()  # Get the count after
+        assert qty_before - 1 == qty_after, f"Expected {qty_before - 1}, but got {qty_after}"
+        print("Contact was successfully deleted.")
+
+
+
+
+
+
 
 
