@@ -1,3 +1,4 @@
+import os
 import time
 
 import pytest
@@ -69,6 +70,25 @@ def addContact(driver,login):
     clickSaveBtn.click()
 
     return login
+
+#-----------------------#FOR SCREENSHOT!!!!!!!!!-----------------------------------------
+def capture_screenshot(test_name):#1 FOR SCREENSHOT!!!!!!!!!
+        screenshot_path = os.path.join(os.getcwd(), f"{test_name}_failed.png")
+        screenshot = pyautogui.screenshot()
+        screenshot.save(screenshot_path)
+        print(f"Screenshot saved at: {screenshot_path}")
+
+@pytest.hookimpl(tryfirst=True, hookwrapper=True)#2 FOR SCREENSHOT!!!!!!!!!
+def pytest_runtest_makereport(item, call):
+    outcome = yield
+    report = outcome.get_result()
+
+    # Check if the test failed
+    if report.when == "call" and report.failed:
+        test_name = item.name  # Get the name of the failed test
+        print(f"Test failed: {test_name}")
+        capture_screenshot(test_name)
+    # -------------------------------------------------------------------------------------
 
 
 

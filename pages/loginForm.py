@@ -14,6 +14,15 @@ class loginForm:
         pwd.click()
         pwd.send_keys('QwertyQwerty1!')
 
+    def fillLoginFormWithEmptyEmail(self):
+        email = self.driver.find_element(By.NAME, 'email')
+        email.click()
+        email.send_keys('')
+        pwd = self.driver.find_element(By.NAME, 'password')
+        pwd.click()
+        pwd.send_keys('QwertyQwerty1!')
+
+
     def clickLogin(self):
         pressLogin = self.driver.find_element(By.NAME, 'login')
         pressLogin.click()
